@@ -37,6 +37,7 @@ You are expected to do the following to complete this project:
 This folder contains sample screenshots that students are required to submit in order to prove they completed various tasks throughout the project.
 
 1. article-cms-solution.png is a screenshot from running the FlaskWebProject on Azure and prove that the student was able to create a new entry. The Title, Author, and Body fields must be populated to prove that the data is being retrieved from the Azure SQL Database while the image on the right proves that an image was uploaded and pulled from Azure Blob Storage.
+
 2. azure-portal-resource-group.png is a screenshot from the Azure Portal showing all of the contents of the Resource Group the student needs to create. The resource group must (at least) contain the following:
 ![all](https://user-images.githubusercontent.com/43758373/206452809-521eed2a-70ae-4d9d-9a2d-8eb9a1f8e2e3.PNG)
 
@@ -44,7 +45,10 @@ This folder contains sample screenshots that students are required to submit in 
 ![sqlTable](https://user-images.githubusercontent.com/43758373/206447931-c647136d-e013-41fb-9ea2-30938cb21fe0.PNG)
 4. blob-solution.png is a screenshot showing an example of blob endpoints for where images are sent for storage.
 ![articlestrg endpoint](https://user-images.githubusercontent.com/43758373/206447934-9b3dec6f-4bcf-4923-a8d9-0d0092275b6f.PNG)
+
 5. uri-redirects-solution.png is a screenshot of the redirect URIs related to Microsoft authentication.
+![auth](https://user-images.githubusercontent.com/43758373/206459662-1dad5365-92c4-4196-a9dc-63df0186a0a9.PNG)
+
 6. log-solution.png is a screenshot showing one potential form of logging with an "Invalid login attempt" and "admin logged in successfully", taken from the app's Log stream. You can customize your log messages as you see fit for these situations.
 
 ## Dependencies
