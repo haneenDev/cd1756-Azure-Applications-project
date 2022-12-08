@@ -38,10 +38,8 @@ This folder contains sample screenshots that students are required to submit in 
 
 1. article-cms-solution.png is a screenshot from running the FlaskWebProject on Azure and prove that the student was able to create a new entry. The Title, Author, and Body fields must be populated to prove that the data is being retrieved from the Azure SQL Database while the image on the right proves that an image was uploaded and pulled from Azure Blob Storage.
 2. azure-portal-resource-group.png is a screenshot from the Azure Portal showing all of the contents of the Resource Group the student needs to create. The resource group must (at least) contain the following:
-	- Storage Account
-	- SQL Server
-	- SQL Database
-	- Resources related to deploying the app
+![all](https://user-images.githubusercontent.com/43758373/206452809-521eed2a-70ae-4d9d-9a2d-8eb9a1f8e2e3.PNG)
+
 3. sql-storage-solution.png is a screenshot showing the created tables and one query of data from the initial scripts.
 ![sqlTable](https://user-images.githubusercontent.com/43758373/206447931-c647136d-e013-41fb-9ea2-30938cb21fe0.PNG)
 4. blob-solution.png is a screenshot showing an example of blob endpoints for where images are sent for storage.
