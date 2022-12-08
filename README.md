@@ -43,7 +43,9 @@ This folder contains sample screenshots that students are required to submit in 
 	- SQL Database
 	- Resources related to deploying the app
 3. sql-storage-solution.png is a screenshot showing the created tables and one query of data from the initial scripts.
+![sqlTable](https://user-images.githubusercontent.com/43758373/206447931-c647136d-e013-41fb-9ea2-30938cb21fe0.PNG)
 4. blob-solution.png is a screenshot showing an example of blob endpoints for where images are sent for storage.
+![articlestrg endpoint](https://user-images.githubusercontent.com/43758373/206447934-9b3dec6f-4bcf-4923-a8d9-0d0092275b6f.PNG)
 5. uri-redirects-solution.png is a screenshot of the redirect URIs related to Microsoft authentication.
 6. log-solution.png is a screenshot showing one potential form of logging with an "Invalid login attempt" and "admin logged in successfully", taken from the app's Log stream. You can customize your log messages as you see fit for these situations.
 
