@@ -1,17 +1,41 @@
 import os
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
-    SQL_SERVER = os.environ.get('SQL_SERVER') or '[SQL_SERVER_GOES_HERE]'
-    SQL_DATABASE = os.environ.get('SQL_DATABASE') or '[SQL_DATABASE_GOES_HERE]'
-    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or '[SQL_USER_NAME_GOES_HERE]'
-    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or '[SQL_PASSWORD_GOES_HERE]'
-    SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE + '?driver=ODBC+Driver+17+for+SQL+Server'
+    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'articlestrg'
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'ZqejfluWfc9Od063mdiWPRROWDL77yBRFR8iOSzu0DVaBKa3DzKCvPKqF6lLrkAAoS4BsD7FVbZe+AStX7SI/g=='
+    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
+
+    SQL_SERVER = os.environ.get('SQL_SERVER') or 'serverhaneen.database.windows.net'
+    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'artciels '
+    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'haneen'
+    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or '@Hamad1997#'
+    # Below URI may need some adjustments for driver version, based on your OS, if running locally
+    SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE  + '?driver=ODBC+Driver+17+for+SQL+Server'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or '[BLOB_ACCOUNT_GOES_HERE]'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or '[BLOB_STORAGE_KEY_GOES_HERE]'
-    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or '[BLOB_CONTAINER_GOES_HERE]'
+    ### Info for MS Authentication ###
+    ### As adapted from: https://github.com/Azure-Samples/ms-identity-python-webapp ###
+    CLIENT_SECRET = "urn8Q~L6asJ0kAWYLkUYO6Mq5-D_3PB3e2_JxaNo"
+    # In your production app, Microsoft recommends you to use other ways to store your secret,
+    # such as KeyVault, or environment variable as described in Flask's documentation here:
+    # https://flask.palletsprojects.com/en/1.1.x/config/#configuring-from-environment-variables
+    # CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+    # if not CLIENT_SECRET:
+    #     raise ValueError("Need to define CLIENT_SECRET environment variable")
 
+    AUTHORITY = "https://login.microsoftonline.com/common"  # For multi-tenant app, else put tenant name
+    # AUTHORITY = "https://login.microsoftonline.com/Enter_the_Tenant_Name_Here"
+
+    CLIENT_ID = "7f6897da-2c1a-4d00-a487-870d507e7bdd"
+
+    REDIRECT_PATH = "/getAToken"  # Used to form an absolute URL; must match to app's redirect_uri set in AAD
+
+    # You can find the proper permission names from this document
+    # https://docs.microsoft.com/en-us/graph/permissions-reference
+    SCOPE = ["User.Read"] # Only need to read user profile for this app
+
+    SESSION_TYPE = "filesystem"  # Token cache will be stored in server-side session
