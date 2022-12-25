@@ -52,7 +52,8 @@ This folder contains sample screenshots that students are required to submit in 
 ![auth](https://user-images.githubusercontent.com/43758373/206459662-1dad5365-92c4-4196-a9dc-63df0186a0a9.PNG)
 
 6. log-solution.png is a screenshot showing one potential form of logging with an "Invalid login attempt" and "admin logged in successfully", taken from the app's Log stream. You can customize your log messages as you see fit for these situations.
-![log-solution](https://user-images.githubusercontent.com/43758373/209446565-57faaae6-621a-43d9-bb79-5cdcd3e73ed5.PNG)
+![log-solution](https://user-images.githubusercontent.com/43758373/209476609-1c604061-176e-4cd3-8994-b0bebcd0d47d.PNG)
+
 
 ## Dependencies
 
